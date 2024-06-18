@@ -2,9 +2,8 @@
 - 👀 Welcome to my GitHub page, where data meets enthusiasm! Dive into my projects and witness the impactful insights and creative solutions that data analysis has to offer. Let's explore the endless possibilities together 
 - 🌱 Excel,SQL,POwer BI,Python 
 - 📫 How to reach me
-    [Linkedin](https://www.linkedin.com/in/arunava-chandan-roy-177790145/)
-    [Instagram](https://www.instagram.com/_poseidon_7_/)
-- 😄 
+    [Linkedin](https://www.linkedin.com/in/arunava-chandan-roy-177790145/) ,
+    [Instagram](https://www.instagram.com/_poseidon_7_/) 😄 
 
 
 <!---
