@@ -4,61 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arunava Chandan Roy - Projects</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation bar -->
     <header>
         <nav>
-            <ul class="navbar">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="theme-switch">
-                <label for="theme-switch-toggle">Dark Mode</label>
-                <input type="checkbox" id="theme-switch-toggle">
-            </div>
         </nav>
     </header>
-
-    <!-- Content section -->
     <main>
-        <!-- Projects page content -->
-        <section id="projects" class="page">
-            <div class="container">
-                <!-- Project 1 -->
-                <div class="project">
-                    <h2>Heart disease prediction</h2>
-                    <p>
-                        Achieved 99% accuracy in predicting heart disease.<br>
-                        Enhanced prediction accuracy by 20% and reduced processing time by 30%.<br>
-                        Implemented the model in real-world applications, impacting care decisions for over 1,000 patients annually.<br>
-                        <a href="link_to_heart_disease_project">Link to project</a>
-                    </p>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project">
-                    <h2>HR attrition analysis</h2>
-                    <p>
-                        Created data-driven HR dashboards, reducing recruitment cycle time by 20% and improving hiring quality by 10%.<br>
-                        Examined attrition, demographics, turnover, and wellness trends, providing insights that improved employee retention rates by 15%.<br>
-                        <a href="link_to_hr_attrition_project">Link to project</a>
-                    </p>
-                </div>
-
-                <!-- Add more projects as needed -->
+        <section id="projects">
+            <div class="project">
+                <img src="heart-disease.jpg" alt="Heart Disease Prediction">
+                <h2>Heart disease prediction</h2>
+                <ul>
+                    <li>Achieved 99% accuracy in predicting heart disease.</li>
+                    <li>Enhanced prediction accuracy by 20% and reduced processing time by 30%.</li>
+                    <li>Implemented the model in real-world applications, impacting care decisions for over 1,000 patients annually.</li>
+                </ul>
             </div>
+            <div class="project">
+                <img src="hr-attrition.jpg" alt="HR Attrition Analysis">
+                <h2>HR attrition analysis</h2>
+                <ul>
+                    <li>Created data-driven HR dashboards, reducing recruitment cycle time by 20% and improving hiring quality by 10%.</li>
+                    <li>Examined attrition, demographics, turnover, and wellness trends, providing insights that improved employee retention rates by 15%.</li>
+                </ul>
+            </div>
+            <!-- Add more projects in similar structure -->
         </section>
     </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Arunava Chandan Roy. All rights reserved.</p>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </footer>
+    <script>
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+        const body = document.body;
 
-    <!-- JavaScript for Dark Mode toggle -->
-    <script src="script.js"></script>
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
