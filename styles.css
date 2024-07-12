@@ -1,0 +1,30 @@
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f0f0f0; /* Background color */
+    padding: 10px; /* Padding around the navigation */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Space between each list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link text color */
+    padding: 5px 10px; /* Padding around link text */
+}
+
+nav ul li a:hover {
+    background-color: #ccc; /* Background color on hover */
+    color: #000; /* Text color on hover */
+}
