@@ -3,40 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>My GitHub Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            margin-right: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>My GitHub Portfolio</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to my GitHub portfolio page! Here you'll find information about my education, skills, projects, and how to contact me.</p>
+        </section>
 
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>University Name</strong><br>
+            <em>Degree Name</em><br>
+            Year Started - Year Graduated</p>
+        </section>
 
-<!-- Your main content goes here -->
-<section id="home">
-    <h2>Home Section</h2>
-    <p>Welcome to my GitHub Portfolio!</p>
-</section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+            </ul>
+            <h3>Tools & Technologies</h3>
+            <ul>
+                <li>Git/GitHub</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </section>
 
-<section id="about">
-    <h2>About Section</h2>
-    <p>Learn more about me and my skills.</p>
-</section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Project 1</h3>
+                <p>Brief description of Project 1.</p>
+                <p>GitHub Repo: <a href="https://github.com/your-username/project1">Project 1 Repo</a></p>
+            </article>
+            <article>
+                <h3>Project 2</h3>
+                <p>Brief description of Project 2.</p>
+                <p>GitHub Repo: <a href="https://github.com/your-username/project2">Project 2 Repo</a></p>
+            </article>
+        </section>
 
-<section id="projects">
-    <h2>Projects Section</h2>
-    <p>Explore my projects and contributions.</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Section</h2>
-    <p>Get in touch with me!</p>
-</section>
-
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li>Email: your-email@example.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/your-username/">Your LinkedIn Profile</a></li>
+                <li>Twitter: <a href="https://twitter.com/your-username">@your-username</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
