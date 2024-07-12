@@ -1,3 +1,7 @@
+remote_theme: pages-themes/slate@v0.2.0
+plugins: - jekyll-remote-theme # add this line to the plugins list if you already have one
+gem "github-pages", group: :jekyll_plugins
+#google_analytics: [Your Google Analytics tracking ID]
 title: Arunava Chandan Roy
 #logo: 
 description: Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions. Check out my portfolio and let's team up to bring your data to life and drive success!
