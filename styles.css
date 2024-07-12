@@ -1,9 +1,16 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the navigation */
 nav {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #f0f0f0; /* Background color */
-    padding: 10px; /* Padding around the navigation */
+    background-color: #333; /* Dark background color */
+    padding: 10px 20px; /* Padding around the navigation */
     z-index: 1000; /* Ensure it's above other content */
 }
 
@@ -15,16 +22,31 @@ nav ul {
 
 nav ul li {
     display: inline; /* Display list items inline */
-    margin-right: 10px; /* Space between each list item */
+    margin-right: 20px; /* Space between each list item */
 }
 
 nav ul li a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Link text color */
-    padding: 5px 10px; /* Padding around link text */
+    color: #fff; /* Link text color */
+    font-size: 16px; /* Font size for links */
 }
 
 nav ul li a:hover {
-    background-color: #ccc; /* Background color on hover */
-    color: #000; /* Text color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for sections */
+section {
+    padding: 20px;
+    margin-top: 60px; /* Add margin to top of sections to account for fixed navigation */
+    background-color: #f0f0f0; /* Light background color */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+section h2 {
+    margin-bottom: 10px; /* Margin below heading */
+}
+
+section p {
+    line-height: 1.6; /* Line height for paragraphs */
 }
