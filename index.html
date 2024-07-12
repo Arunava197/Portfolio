@@ -3,105 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arunava Chandan Roy - Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <title>Arunava Chandan Roy - Data Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation bar -->
     <header>
         <nav>
-            <ul class="navbar">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="theme-switch">
-                <label for="theme-switch-toggle">Dark Mode</label>
-                <input type="checkbox" id="theme-switch-toggle">
-            </div>
         </nav>
     </header>
-
-    <!-- Content section -->
     <main>
-        <!-- Home page content -->
-        <section id="home" class="page">
-            <div class="container">
-                <!-- Profile section -->
-                <div class="profile">
-                    <img src="bubble_shape_photo.jpg" alt="Profile Photo">
-                    <h1>Arunava Chandan Roy</h1>
-                    <p>
-                        Address: Rangpur, 5401, Bangladesh<br>
-                        Mobile: +8801303022570<br>
-                        Email: arunava2171@gmail.com<br>
-                        GitHub: <a href="https://github.com/Arunava197">Arunava197</a><br>
-                        LinkedIn: <a href="https://www.linkedin.com/in/arunava-chandan-roy">Arunava Chandan Roy</a>
-                    </p>
-                </div>
-
-                <!-- Skills section -->
-                <div class="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Analytical</li>
-                        <li>Collaborative</li>
-                        <li>Data Models</li>
-                        <li>Data Sets</li>
-                        <li>Data Visualization Tools</li>
-                        <li>Machine Learning</li>
-                        <!-- Add more skills as needed -->
-                    </ul>
-                </div>
-
-                <!-- Tools section -->
-                <div class="tools">
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>Excel</li>
-                        <li>Power BI</li>
-                        <li>SQL</li>
-                        <li>Python</li>
-                        <li>Lightroom</li>
-                        <li>GA4</li>
-                        <li>SPSS</li>
-                        <li>R</li>
-                        <li>Premiere Pro (Intermediate)</li>
-                        <!-- Add more tools as needed -->
-                    </ul>
-                </div>
-
-                <!-- Hobbies section -->
-                <div class="hobbies">
-                    <h2>Hobbies</h2>
-                    <ul>
-                        <li>Traveling</li>
-                        <li>Photography</li>
-                        <li>Cinematography</li>
-                        <li>Cycling</li>
-                        <li>Music</li>
-                        <!-- Add more hobbies as needed -->
-                    </ul>
-                </div>
-
-                <!-- Contact section -->
-                <div class="contact">
-                    <h2>Contact</h2>
-                    <p>
-                        Email: arunava2171@gmail.com<br>
-                        Phone: +8801303022570
-                    </p>
-                </div>
+        <section id="about">
+            <div class="intro">
+                <img src="your-photo.jpg" alt="Arunava Chandan Roy">
+                <h1>Arunava Chandan Roy</h1>
+                <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions. Check out my portfolio and let's team up to bring your data to life and drive success!</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Excel: Execute advanced formulas, conduct precise data analysis, streamline data cleansing, apply conditional formatting, craft compelling data visualization, and foster collaboration.</li>
+                    <li>Power BI: Demonstrate expertise in data visualization, drive dashboard creation, spearhead report generation, and optimize DAX formulas.</li>
+                    <li>SQL: Master querying, oversee database management, orchestrate data manipulation, manage joins and unions, and innovate with window functions.</li>
+                    <li>Python: Leverage proficiency in data analysis, champion data visualization using numpy, pandas, matplotlib, seaborn, and scikit-learn.</li>
+                    <li>Lightroom: Excel in photo editing, pioneer image organization, and lead in color grading.</li>
+                    <li>Google Analytics 4 (GA4): Navigate event tracking, conduct conversion tracking, analyze funnels, interpret user behavior, generate custom reports, and facilitate data import.</li>
+                    <li>SPSS: Navigate statistical analysis, manipulate data, lead hypothesis testing, manage regression analysis, and create impactful data visualizations.</li>
+                    <li>R: Deploy basic understanding of statistical analysis, drive data manipulation, employ visualization techniques, and utilize programming functionalities.</li>
+                    <li>Premiere Pro (Intermediate): Innovate in video editing, manage timelines, refine audio editing, implement transitions, effects, and enhance color correction techniques.</li>
+                </ul>
+            </div>
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Traveling</li>
+                    <li>Photography</li>
+                    <li>Cinematography</li>
+                    <li>Cycling</li>
+                    <li>Music</li>
+                </ul>
             </div>
         </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Rangpur, 5401, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunava-chandan-roy">linkedin.com/in/arunava-chandan-roy</a></p>
+        </section>
     </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Arunava Chandan Roy. All rights reserved.</p>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </footer>
+    <script>
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+        const body = document.body;
 
-    <!-- JavaScript for Dark Mode toggle -->
-    <script src="script.js"></script>
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
