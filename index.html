@@ -3,275 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arunava Chandan Roy - GitHub Portfolio</title>
-    <style>
-        /* Base Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f3f3f3; /* Light theme background */
-            color: #333; /* Light theme text color */
-            transition: background-color 0.3s, color 0.3s;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-        header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #ddd;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            transition: color 0.3s;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-
-        /* Dark Theme */
-        body.dark-mode {
-            background-color: #333; /* Dark theme background */
-            color: #f3f3f3; /* Dark theme text color */
-        }
-        body.dark-mode header, body.dark-mode nav a, body.dark-mode main {
-            color: #f3f3f3; /* Dark theme text color */
-        }
-        body.dark-mode h2, body.dark-mode a {
-            color: #f3f3f3; /* Dark theme text color */
-        }
-
-        /* Toggle Button */
-        .toggle-btn {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #ddd; /* Light toggle button background */
-            border: none;
-            outline: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .toggle-btn:hover {
-            background-color: #bbb; /* Light toggle button background on hover */
-        }
-        .toggle-btn.dark-mode {
-            background-color: #555; /* Dark toggle button background */
-            color: #f3f3f3; /* Dark toggle button text color */
-        }
-        .toggle-btn.dark-mode:hover {
-            background-color: #777; /* Dark toggle button background on hover */
-        }
-
-        /* Skills and Projects Styling */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-        }
-        .skills-list, .tools-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .tools-list li::before {
-            content: "\2022"; /* Bullet point */
-            color: #333;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .projects-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .projects-list li {
-            margin-bottom: 10px;
-        }
-        .projects-list li a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .projects-list li a:hover {
-            text-decoration: underline;
-        }
-        .education-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-    </style>
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
 </head>
 <body>
+    <!-- Navigation bar -->
     <header>
-        <h1>Arunava Chandan Roy - GitHub Portfolio</h1>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact Me</a>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+            <div class="theme-switch">
+                <label for="theme-switch-toggle">Dark Mode</label>
+                <input type="checkbox" id="theme-switch-toggle">
+            </div>
         </nav>
-        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </header>
+
+    <!-- Content section -->
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>
-                Address: Rangpur, 5401, Bangladesh.<br>
-                Mobile: <a href="tel:+8801303022570">+8801303022570</a><br>
-                Email: <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a><br>
-                GitHub: <a href="https://github.com/Arunava197">Arunava197</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/arunava-chandan-roy">Arunava Chandan Roy</a>
-            </p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-column">
-                    <ul class="education-list">
-                        <li>
-                            <strong>Shahjalal University of Science & Technology, Sylhet</strong><br>
-                            B.Sc. (Honors) in Statistics | 2017 - 2022<br>
-                            CGPA: 2.70 out of 4.00
-                        </li>
-                        <li>
-                            <strong>Ashuganj Sarkarkhana College</strong><br>
-                            HSC in Science | 2014 - 2016<br>
-                            GPA: 4.75 out of 5.0
-                        </li>
+        <!-- Home page content -->
+        <section id="home" class="page">
+            <div class="container">
+                <div class="profile">
+                    <img src="bubble_shape_photo.jpg" alt="Profile Photo">
+                    <h1>Your Name</h1>
+                    <p>Description about yourself goes here.</p>
+                </div>
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <!-- Add more skills as needed -->
                     </ul>
                 </div>
-                <div class="education-column">
-                    <ul class="education-list">
-                        <li>
-                            <strong>Ashuganj Sarkarkhana College</strong><br>
-                            SSC in Science | 2012 - 2014<br>
-                            GPA: 5.00 out of 5.00
-                        </li>
+                <div class="tools">
+                    <h2>Tools</h2>
+                    <ul>
+                        <li>Tool 1</li>
+                        <li>Tool 2</li>
+                        <!-- Add more tools as needed -->
                     </ul>
+                </div>
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <p>Email: yourname@example.com</p>
+                    <p>Phone: +1 234 567 890</p>
                 </div>
             </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div>
-                    <h3>Analytical</h3>
-                    <ul class="skills-list">
-                        <li>Collaborative</li>
-                        <li>Data Models</li>
-                        <li>Data Sets</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Data Visualization Tools</h3>
-                    <ul class="skills-list">
-                        <li>Machine Learning</li>
-                    </ul>
-                </div>
-            </div>
-            <h3>Tools</h3>
-            <ul class="tools-list">
-                <li>Excel</li>
-                <li>Power BI</li>
-                <li>SQL</li>
-                <li>Python (numpy, pandas, matplotlib, seaborn, scikit-learn)</li>
-                <li>Lightroom</li>
-                <li>Google Analytics 4</li>
-                <li>SPSS</li>
-                <li>R</li>
-                <li>Premiere Pro (Intermediate)</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul class="projects-list">
-                <li>
-                    <strong>Heart Disease Prediction:</strong><br>
-                    Achieved 99% accuracy in predicting heart disease.<br>
-                    Enhanced prediction accuracy by 20% and reduced processing time by 30%.<br>
-                    Implemented the model in real-world applications, impacting care decisions for over 1,000 patients annually.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>HR Attrition Analysis:</strong><br>
-                    Created data-driven HR dashboards, reducing recruitment cycle time by 20% and improving hiring quality by 10%.<br>
-                    Examined attrition, demographics, turnover, and wellness trends, providing insights that improved employee retention rates by 15%.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Monthly Sales Trends and Optimizing Fulfillment:</strong><br>
-                    Extracted insights from sales data, optimizing operations and increasing efficiency by 25%.<br>
-                    Supported sustainable growth through data-driven decisions, contributing to a 10% revenue increase.<br>
-                    Developed and implemented dynamic pricing models based on sales trends analysis, resulting in a 15% increase in average order value.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Healthcare Insurance Dashboard:</strong><br>
-                    Deployed interactive dashboards to track key health insurance metrics, reducing report generation time by 40%.<br>
-                    Evaluated claims data to identify cost-saving opportunities, saving the company 15% in operational costs.<br>
-                    Visualized provider performance and network utilization for strategic decisions, improving network efficiency by 20%.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>AirBnb Market Insights Analysis:</strong><br>
-                    Investigated market trends in multiple European cities using Excel, identifying opportunities to increase occupancy rates by 12%.<br>
-                    Illustrated booking patterns and average prices, highlighting room types and host demographics, leading to a 15% increase in revenue for top-performing hosts.<br>
-                    Uncovered customer satisfaction trends to inform market strategies, resulting in a 10% improvement in customer reviews.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Diabetes Factors in Sylhet Region:</strong><br>
-                    Researched factors impacting diabetes prevalence to support targeted health interventions, leading to a 20% increase in awareness programs.<br>
-                    Explored demographics, lifestyle, and environmental contributors, shaping effective strategies that reduced diabetes rates by 10% in the region.<br>
-                    Formulated tailored public health initiatives to address and reduce diabetes rates, reaching over 5,000 residents.<br>
-                    <a href="#">LINK</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <ul>
-                <li>Email: <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/arunava-chandan-roy">Arunava Chandan Roy</a></li>
-                <li>GitHub: <a href="https://github.com/Arunava197">Arunava197</a></li>
-            </ul>
         </section>
     </main>
 
-    <script>
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dark Mode toggle -->
+    <script src="script.js"></script>
 </body>
 </html>
