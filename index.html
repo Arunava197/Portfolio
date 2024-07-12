@@ -77,6 +77,11 @@
         }
 
         /* Skills and Projects Styling */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
         .skills-list, .tools-list {
             list-style-type: none;
             padding-left: 0;
@@ -128,36 +133,51 @@
 
         <section id="education">
             <h2>Education</h2>
-            <ul class="education-list">
-                <li>
-                    <strong>Shahjalal University of Science & Technology, Sylhet</strong><br>
-                    B.Sc. (Honors) in Statistics | 2017 - 2022<br>
-                    CGPA: 2.70 out of 4.00
-                </li>
-                <li>
-                    <strong>Ashuganj Sarkarkhana College</strong><br>
-                    HSC in Science | 2014 - 2016<br>
-                    GPA: 4.75 out of 5.0
-                </li>
-                <li>
-                    <strong>Ashuganj Sarkarkhana College</strong><br>
-                    SSC in Science | 2012 - 2014<br>
-                    GPA: 5.00 out of 5.00
-                </li>
-            </ul>
+            <div class="education-container">
+                <div class="education-column">
+                    <ul class="education-list">
+                        <li>
+                            <strong>Shahjalal University of Science & Technology, Sylhet</strong><br>
+                            B.Sc. (Honors) in Statistics | 2017 - 2022<br>
+                            CGPA: 2.70 out of 4.00
+                        </li>
+                        <li>
+                            <strong>Ashuganj Sarkarkhana College</strong><br>
+                            HSC in Science | 2014 - 2016<br>
+                            GPA: 4.75 out of 5.0
+                        </li>
+                    </ul>
+                </div>
+                <div class="education-column">
+                    <ul class="education-list">
+                        <li>
+                            <strong>Ashuganj Sarkarkhana College</strong><br>
+                            SSC in Science | 2012 - 2014<br>
+                            GPA: 5.00 out of 5.00
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <h3>Analytical</h3>
-            <ul class="skills-list">
-                <li>Collaborative</li>
-                <li>Data Models</li>
-                <li>Data Sets</li>
-                <li>Data Visualization Tools</li>
-                <li>Machine Learning</li>
-            </ul>
-
+            <div class="skills-container">
+                <div>
+                    <h3>Analytical</h3>
+                    <ul class="skills-list">
+                        <li>Collaborative</li>
+                        <li>Data Models</li>
+                        <li>Data Sets</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Data Visualization Tools</h3>
+                    <ul class="skills-list">
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
             <h3>Tools</h3>
             <ul class="tools-list">
                 <li>Excel</li>
@@ -182,40 +202,7 @@
                     Implemented the model in real-world applications, impacting care decisions for over 1,000 patients annually.<br>
                     <a href="#">LINK</a>
                 </li>
-                <li>
-                    <strong>HR Attrition Analysis:</strong><br>
-                    Created data-driven HR dashboards, reducing recruitment cycle time by 20% and improving hiring quality by 10%.<br>
-                    Examined attrition, demographics, turnover, and wellness trends, providing insights that improved employee retention rates by 15%.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Monthly Sales Trends and Optimizing Fulfillment:</strong><br>
-                    Extracted insights from sales data, optimizing operations and increasing efficiency by 25%.<br>
-                    Supported sustainable growth through data-driven decisions, contributing to a 10% revenue increase.<br>
-                    Developed and implemented dynamic pricing models based on sales trends analysis, resulting in a 15% increase in average order value.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Healthcare Insurance Dashboard:</strong><br>
-                    Deployed interactive dashboards to track key health insurance metrics, reducing report generation time by 40%.<br>
-                    Evaluated claims data to identify cost-saving opportunities, saving the company 15% in operational costs.<br>
-                    Visualized provider performance and network utilization for strategic decisions, improving network efficiency by 20%.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>AirBnb Market Insights Analysis:</strong><br>
-                    Investigated market trends in multiple European cities using Excel, identifying opportunities to increase occupancy rates by 12%.<br>
-                    Illustrated booking patterns and average prices, highlighting room types and host demographics, leading to a 15% increase in revenue for top-performing hosts.<br>
-                    Uncovered customer satisfaction trends to inform market strategies, resulting in a 10% improvement in customer reviews.<br>
-                    <a href="#">LINK</a>
-                </li>
-                <li>
-                    <strong>Diabetes Factors in Sylhet Region:</strong><br>
-                    Researched factors impacting diabetes prevalence to support targeted health interventions, leading to a 20% increase in awareness programs.<br>
-                    Explored demographics, lifestyle, and environmental contributors, shaping effective strategies that reduced diabetes rates by 10% in the region.<br>
-                    Formulated tailored public health initiatives to address and reduce diabetes rates, reaching over 5,000 residents.<br>
-                    <a href="#">LINK</a>
-                </li>
+                <!-- Add more projects as needed -->
             </ul>
         </section>
 
