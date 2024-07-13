@@ -7,118 +7,128 @@
 
 /* Body styles */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Light mode background color */
-    transition: background-color 0.3s ease;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-
-.dark-mode {
-    background-color: #333; /* Dark mode background color */
-    color: #fff; /* Dark mode text color */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for dark mode */
 }
 
 /* Sidebar styles */
 .sidebar {
-    width: 33%;
+    width: 100%;
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    position: fixed;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the contents horizontally */
-    justify-content: center; /* Center the contents vertically */
     transition: background-color 0.3s, color 0.3s;
 }
+
 .sidebar img {
-    width: 80%;
+    width: 50%;
     border-radius: 50%;
     display: block;
-    margin: 20px auto; /* Added margin for space around the photo */
+    margin: 0 auto 20px;
 }
+
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: center; /* Center the text */
 }
+
 .sidebar a {
     text-decoration: none;
     color: #333;
 }
+
 .sidebar section {
     margin-bottom: 20px;
-    width: 100%; /* Make sections take full width of the sidebar */
 }
 
-/* Header styles */
-header {
-    background-color: #007bff; /* Header background color */
-    padding: 10px 20px; /* Add padding to increase clickable area */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure header is above other content */
-}
-
-nav {
-    margin-left: 20px; /* Add gap from the left side */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f0f0f0; /* Hover color */
-}
-
-/* Main styles */
+/* Main content styles */
 main {
-    max-width: 800px;
-    margin: 80px auto 50px; /* Adjust margin to account for fixed header and add space on the sides */
-    padding: 20px; /* Add padding for content */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 35%; /* Adjust margin to make space for the sidebar */
+    padding: 20px;
+    flex: 1;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    margin-top: 20px;
+/* Navigation styles */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
 }
 
-#dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px; /* Position at the bottom left */
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Dark mode styles */
+.dark-mode {
     background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #f4f4f4;
 }
 
-#dark-mode-toggle:hover {
-    background-color: #555;
+.dark-mode .sidebar {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.dark-mode .sidebar a {
+    color: #f4f4f4;
+}
+
+.project-details img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 33%;
+        height: 100vh;
+        position: fixed;
+        overflow: auto;
+    }
+
+    main {
+        margin-left: 35%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        position: relative;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
 }
