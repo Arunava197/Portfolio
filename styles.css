@@ -20,6 +20,36 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition for dark mode */
 }
 
+/* Sidebar styles */
+.sidebar {
+    width: 33%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar img {
+    width: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto; /* Added margin for space around the photo */
+}
+.sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+.sidebar section {
+    margin-bottom: 20px;
+}
+
 /* Header styles */
 header {
     background-color: #007bff; /* Header background color */
@@ -61,6 +91,8 @@ main {
     max-width: 800px;
     margin: 80px auto 50px; /* Adjust margin to account for fixed header and add space on the sides */
     padding: 20px; /* Add padding for content */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 35%; /* Adjust margin to make space for the sidebar */
 }
 
 /* Footer styles */
