@@ -28,7 +28,10 @@ body {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     height: 100%;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents horizontally */
+    justify-content: center; /* Center the contents vertically */
     transition: background-color 0.3s, color 0.3s;
 }
 .sidebar img {
@@ -41,6 +44,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center; /* Center the text */
 }
 .sidebar a {
     text-decoration: none;
@@ -48,6 +52,7 @@ body {
 }
 .sidebar section {
     margin-bottom: 20px;
+    width: 100%; /* Make sections take full width of the sidebar */
 }
 
 /* Header styles */
