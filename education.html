@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arunava Chandan Roy - Education & Certifications</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s;
+        }
+        .sidebar {
+            width: 33%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar img {
+            width: 80%;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar section {
+            margin-bottom: 20px;
+        }
+        main {
+            margin-left: 35%;
+            padding: 20px;
+            flex: 1;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            margin-right: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar {
+            background-color: #444;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar a {
+            color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
