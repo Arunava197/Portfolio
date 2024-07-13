@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <section id="about-me">
+            <img src="acroy.png" alt="Arunava Chandan Roy">
+            <h2>Arunava Chandan Roy</h2>
+            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Rangpur, 5401, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunava-chandan-roy">linkedin.com/in/arunava-chandan-roy</a></p>
+        </section>
+    </div>
+
     <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <section id="education">
             <h2>EDUCATION</h2>
             <div class="section-content">
@@ -24,8 +41,6 @@
                 <p>B.Sc. (Honors) in Statistics</p>
             </div>
         </section>
-
-        
 
         <section id="extracurriculars">
             <h2>EXTRA CURRICULARS</h2>
@@ -57,10 +72,12 @@
                 </ul>
             </div>
         </section>
+
+        <footer>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </footer>
     </main>
-    <footer>
-        <button id="dark-mode-toggle">Dark Mode</button>
-    </footer>
+
     <script>
         const darkModeToggle = document.querySelector('#dark-mode-toggle');
         const body = document.body;
