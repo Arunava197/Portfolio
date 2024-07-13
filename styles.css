@@ -22,7 +22,7 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-    width: 33%;
+    width:40%;
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
@@ -52,6 +52,7 @@ body {
 }
 .sidebar section {
     margin-bottom: 20px;
+    margin-left: 20px;
     width: 100%; /* Make sections take full width of the sidebar */
 }
 
