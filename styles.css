@@ -73,6 +73,9 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure header is above other content */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
 }
 
 nav {
@@ -103,16 +106,15 @@ nav ul li a:hover {
 /* Main styles */
 main {
     max-width: 800px;
-    margin: 80px auto 50px; /* Adjust margin to account for fixed header and add space on the sides */
+    margin: 80px 50px 50px 35%; /* Adjust margin to account for fixed header, sidebar, and add space on the sides */
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 35%; /* Adjust margin to make space for the sidebar */
 }
 
 /* Add spacing between headers */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
-    margin-bottom: 20px; /* Space below headers */
+    
 }
 
 /* Dark mode main content */
