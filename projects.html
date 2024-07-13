@@ -3,23 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arunava Chandan Roy - Projects</title>
+    <title>ARUNAVA CHANDAN ROY - Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s;
+        }
+        .sidebar {
+            width: 33%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar img {
+            width: 80%;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar section {
+            margin-bottom: 20px;
+        }
+        main {
+            margin-left: 35%;
+            padding: 20px;
+            flex: 1;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            margin-right: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar {
+            background-color: #444;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar a {
+            color: #f4f4f4;
+        }
+        .project-details img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <section id="about-me">
+            <img src="acroy.png" alt="Arunava Chandan Roy">
+            <h2>ARUNAVA CHANDAN ROY</h2>
+            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Rangpur, 5401, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunava-chandan-roy">linkedin.com/in/arunava-chandan-roy</a></p>
+        </section>
+    </div>
+
     <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <section id="projects">
             <div class="project">
-                <h2><a href="#heart-disease">Heart disease prediction</a></h2>
+                <h2><a href="#heart-disease">Heart Disease Prediction</a></h2>
                 <div id="heart-disease" class="project-details">
                     <img src="heart-disease.jpg" alt="Heart Disease Prediction">
                     <ul>
@@ -30,7 +118,7 @@
                 </div>
             </div>
             <div class="project">
-                <h2><a href="#hr-attrition">HR attrition analysis</a></h2>
+                <h2><a href="#hr-attrition">HR Attrition Analysis</a></h2>
                 <div id="hr-attrition" class="project-details">
                     <img src="hr-attrition.jpg" alt="HR Attrition Analysis">
                     <ul>
@@ -85,9 +173,11 @@
             </div>
         </section>
     </main>
+
     <footer>
         <button id="dark-mode-toggle">Dark Mode</button>
     </footer>
+
     <script>
         const darkModeToggle = document.querySelector('#dark-mode-toggle');
         const body = document.body;
