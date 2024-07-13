@@ -76,7 +76,7 @@ header {
 }
 
 nav {
-    margin-left: 20px; /* Add gap from the left side */
+    margin-leftt: 20px; /* Add gap from the left side */
 }
 
 nav ul {
@@ -109,6 +109,12 @@ main {
     margin-left: 35%; /* Adjust margin to make space for the sidebar */
 }
 
+/* Add spacing between headers */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px; /* Space above headers */
+    margin-bottom: 20px; /* Space below headers */
+}
+
 /* Dark mode main content */
 .dark-mode main {
     background-color: #333;
@@ -124,7 +130,7 @@ footer {
 #dark-mode-toggle {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Position at the bottom left */
+    right: 20px; /* Position at the bottom left */
     background-color: #333;
     color: #fff;
     border: none;
