@@ -55,6 +55,15 @@ body {
     width: 100%; /* Make sections take full width of the sidebar */
 }
 
+/* Dark mode sidebar */
+.dark-mode .sidebar {
+    background-color: #444;
+    color: #f4f4f4;
+}
+.dark-mode .sidebar a {
+    color: #f4f4f4;
+}
+
 /* Header styles */
 header {
     background-color: #007bff; /* Header background color */
@@ -100,6 +109,12 @@ main {
     margin-left: 35%; /* Adjust margin to make space for the sidebar */
 }
 
+/* Dark mode main content */
+.dark-mode main {
+    background-color: #333;
+    color: #fff;
+}
+
 /* Footer styles */
 footer {
     text-align: center;
@@ -109,7 +124,7 @@ footer {
 #dark-mode-toggle {
     position: fixed;
     bottom: 20px;
-    right: 20px; /* Position at the bottom left */
+    left: 20px; /* Position at the bottom left */
     background-color: #333;
     color: #fff;
     border: none;
