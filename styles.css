@@ -108,8 +108,8 @@ footer {
 
 #dark-mode-toggle {
     position: fixed;
-    bottom: 20px;
-    left: 20px; /* Position at the bottom left */
+    top: 20px;
+    right: 20px; /* Position at the bottom left */
     background-color: #333;
     color: #fff;
     border: none;
