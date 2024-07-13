@@ -6,53 +6,126 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional CSS for layout */
         body {
             display: flex;
+            min-height: 100vh;
+            margin: 0;
         }
-        nav {
-            flex: 0 0 200px; /* Fixed width for left sidebar */
-            background-color: #f0f0f0;
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
             padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar section {
+            margin-bottom: 20px;
         }
         main {
-            flex: 1; /* Take remaining width */
+            margin-left: 270px;
             padding: 20px;
+            flex: 1;
         }
         nav ul {
-            list-style-type: none;
+            display: flex;
+            list-style: none;
             padding: 0;
         }
-        nav ul li {
-            margin-bottom: 10px;
+        nav li {
+            margin-right: 10px;
         }
-        .intro img {
-            max-width: 100%;
-            border-radius: 50%;
+        nav a {
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <section id="about">
-        <div class="intro">
+    <div class="sidebar">
+        <section id="about-me">
             <img src="acroy.png" alt="Arunava Chandan Roy">
             <h2>Arunava Chandan Roy</h2>
-            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions. Check out my portfolio and let's team up to bring your data to life and drive success!</p>
-        </div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Excel: Execute advanced formulas, conduct precise data analysis, streamline data cleansing, apply conditional formatting, craft compelling data visualization, and foster collaboration.</li>
-                <li>
+            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Rangpur, 5401, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunava-chandan-roy">linkedin.com/in/arunava-chandan-roy</a></p>
+        </section>
+    </div>
+
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <div class="intro">
+                <h2>Arunava Chandan Roy</h2>
+                <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions. Check out my portfolio and let's team up to bring your data to life and drive success!</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Excel: Execute advanced formulas, conduct precise data analysis, streamline data cleansing, apply conditional formatting, craft compelling data visualization, and foster collaboration.</li>
+                    <li>Power BI: Demonstrate expertise in data visualization, drive dashboard creation, spearhead report generation, and optimize DAX formulas.</li>
+                    <li>SQL: Master querying, oversee database management, orchestrate data manipulation, manage joins and unions, and innovate with window functions.</li>
+                    <li>Python: Leverage proficiency in data analysis, champion data visualization using numpy, pandas, matplotlib, seaborn, and scikit-learn.</li>
+                    <li>Lightroom: Excel in photo editing, pioneer image organization, and lead in color grading.</li>
+                    <li>Google Analytics 4 (GA4): Navigate event tracking, conduct conversion tracking, analyze funnels, interpret user behavior, generate custom reports, and facilitate data import.</li>
+                    <li>SPSS: Navigate statistical analysis, manipulate data, lead hypothesis testing, manage regression analysis, and create impactful data visualizations.</li>
+                    <li>R: Deploy basic understanding of statistical analysis, drive data manipulation, employ visualization techniques, and utilize programming functionalities.</li>
+                    <li>Premiere Pro (Intermediate): Innovate in video editing, manage timelines, refine audio editing, implement transitions, effects, and enhance color correction techniques.</li>
+                </ul>
+            </div>
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Traveling</li>
+                    <li>Photography</li>
+                    <li>Cinematography</li>
+                    <li>Cycling</li>
+                    <li>Music</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </footer>
+    </main>
+
+    <script>
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
