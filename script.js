@@ -1,44 +1,84 @@
-// Dark mode toggle functionality
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
-const body = document.body;
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const currentMode = body.classList.contains('dark-mode') ? 'Dark Mode' : 'Light Mode';
-    darkModeToggle.textContent = currentMode;
-});
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light mode background color */
+    transition: background-color 0.3s ease;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
-// Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+.dark-mode {
+    background-color: #333; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for dark mode */
+}
 
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+/* Header styles */
+header {
+    background-color: #007bff; /* Header background color */
+    padding: 10px 20px; /* Add padding to increase clickable area */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure header is above other content */
+}
 
-// Animation triggers (optional)
-const sections = document.querySelectorAll('section');
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
 
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2
-};
+nav ul li {
+    margin-right: 20px;
+}
 
-const observer = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-        } else {
-            entry.target.classList.remove('in-view');
-        }
-    });
-}, options);
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+nav ul li a:hover {
+    color: #f0f0f0; /* Hover color */
+}
+
+/* Main styles */
+main {
+    max-width: 800px;
+    margin-top: 80px; /* Adjust margin to account for fixed header */
+    margin-bottom: 50px; /* Add bottom margin to prevent footer overlap */
+    padding: 20px; /* Add padding for content */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
