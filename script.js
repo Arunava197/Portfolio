@@ -1,49 +1,38 @@
-// script.js
-
-// Function to handle sidebar visibility and main content adjustments
-function handleLayout() {
-    var viewportWidth = window.innerWidth;
-    var sidebar = document.querySelector('.sidebar');
-    var mainContent = document.querySelector('main');
-
-    if (viewportWidth <= 1024) {
-        sidebar.style.display = 'none';
-        mainContent.style.marginLeft = '0';
-        mainContent.style.width = '100%';
-        mainContent.style.paddingLeft = '20px'; // Adjust padding as needed
-    } else {
-        sidebar.style.display = 'block';
-        mainContent.style.marginLeft = '35%'; // Adjust margin for sidebar width
-        mainContent.style.width = 'auto';
-        mainContent.style.paddingLeft = '20px'; // Adjust padding as needed
-    }
-}
-
-// Initial call to set sidebar visibility and main content on page load
-handleLayout();
-
-// Event listener for window resize (optional, for responsiveness)
-window.addEventListener('resize', function() {
-    handleLayout();
-});
-
-// Dark mode toggle functionality
 document.addEventListener('DOMContentLoaded', () => {
-    const darkModeToggle = document.querySelector('#dark-mode-toggle');
-    const body = document.body;
-
     // Check for dark mode preference on page load
     if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
+        document.body.classList.add('dark-mode');
     }
 
     // Toggle dark mode and store preference
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
     darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'enabled');
         } else {
             localStorage.removeItem('darkMode');
         }
     });
+
+    // Handle sidebar visibility based on viewport width
+    function handleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        const main = document.querySelector('main');
+        if (window.innerWidth <= 1024) {
+            sidebar.style.display = 'none';
+            main.style.marginLeft = '20px'; // Adjust main content margin when sidebar is hidden
+            main.style.width = 'calc(100% - 40px)'; // Full width minus padding
+        } else {
+            sidebar.style.display = 'flex';
+            main.style.marginLeft = '250px'; // Adjust to the width of the sidebar
+            main.style.width = 'calc(100% - 270px)'; // Full width minus sidebar width and padding
+        }
+    }
+
+    // Initial call to handle sidebar visibility
+    handleSidebar();
+
+    // Add event listener for window resize to adjust sidebar visibility
+    window.addEventListener('resize', handleSidebar);
 });
