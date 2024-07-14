@@ -1,55 +1,40 @@
-/* Reset default margin and padding */
+/* General reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0; /* Light mode background color */
-    transition: background-color 0.3s ease;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-/* Dark mode styles */
-.dark-mode {
-    background-color: #333; /* Dark mode background color */
-    color: #fff; /* Dark mode text color */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for dark mode */
-}
-
-/* Sidebar styles */
 .sidebar {
-    width: 250px; /* Adjust width for mobile */
+    width: 33%;
     background-color: #f4f4f4;
     padding: 20px;
-    padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the contents horizontally */
-    justify-content: flex-start; /* Align contents to the top */
+    overflow: auto;
     transition: background-color 0.3s, color 0.3s;
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
 }
 
 .sidebar img {
     width: 80%;
     border-radius: 50%;
     display: block;
-    margin: 40px 0; /* Adjusted margin for more space around the photo */
+    margin: 0 auto 20px;
 }
 
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: center; /* Center the text */
 }
 
 .sidebar a {
@@ -59,11 +44,42 @@ body {
 
 .sidebar section {
     margin-bottom: 20px;
-    margin-top: 20px;
-    width: 90%; /* Make sections take full width of the sidebar */
 }
 
-/* Dark mode sidebar */
+main {
+    margin-left: 35%;
+    padding: 20px;
+    flex: 1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#intro img {
+    width: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
 .dark-mode .sidebar {
     background-color: #444;
     color: #f4f4f4;
@@ -73,65 +89,6 @@ body {
     color: #f4f4f4;
 }
 
-/* Header styles */
-header {
-    background-color: #007bff; /* Header background color */
-    padding: 10px 20px; /* Add padding to increase clickable area */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure header is above other content */
-    display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: center;
-}
-
-nav {
-    margin-left: 20px; /* Add gap from the left side */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f0f0f0; /* Hover color */
-}
-
-/* Main styles */
-main {
-    flex: 1;
-    margin: 80px 20px 50px 270px; /* Adjust margin to account for fixed header and sidebar */
-    padding: 20px; /* Add padding for content */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Add spacing between headers */
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 20px; /* Space above headers */
-}
-
-/* Dark mode main content */
-.dark-mode main {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Footer styles */
 footer {
     text-align: center;
     margin-top: 20px;
@@ -140,7 +97,7 @@ footer {
 #dark-mode-toggle {
     position: fixed;
     bottom: 20px;
-    right: 20px; /* Position at the bottom right */
+    right: 20px;
     background-color: #333;
     color: #fff;
     border: none;
@@ -154,27 +111,18 @@ footer {
     background-color: #555;
 }
 
-/* Media query for tablets and smaller devices */
-@media (max-width: 1024px) {
+/* Media query for mobile devices */
+@media (max-width: 768px) {
     .sidebar {
-        display: none; /* Hide sidebar on tablets and smaller devices */
+        display: none; /* Hide sidebar on mobile devices */
     }
 
     main {
-        margin: 80px 20px 50px 20px; /* Adjust margin to 20px on all sides for mobile */
-        width: calc(100% - 40px); /* Full width minus padding */
-    }
-
-    header {
-        justify-content: space-between; /* Space out header content */
-    }
-
-    nav ul {
-        justify-content: space-around; /* Space out navigation links */
+        margin: 20px; /* 20px margin on all sides for mobile */
+        width: calc(100% - 40px); /* Full width minus 20px margin on each side */
     }
 }
-
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
     #intro {
         display: none; /* Hide sidebar on desktop devices */
     }
