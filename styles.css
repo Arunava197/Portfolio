@@ -23,7 +23,7 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-    width: 250px; /* Adjust width for mobile */
+    width: 30%; /* Adjust width to 30% */
     background-color: #f4f4f4;
     padding: 20px;
     padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
@@ -115,7 +115,7 @@ nav ul li a:hover {
 /* Main styles */
 main {
     flex: 1;
-    margin: 80px 20px 50px 270px; /* Adjust margin to account for fixed header and sidebar */
+    margin: 80px 20px 50px calc(30% + 40px); /* Adjust margin to account for fixed header and sidebar */
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
