@@ -26,7 +26,7 @@ body {
     width: 250px; /* Adjust width for mobile */
     background-color: #f4f4f4;
     padding: 20px;
-    padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
+    padding-top: 80px; /* Add padding to the top to create space for the navigation pane */
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     height: 100%;
