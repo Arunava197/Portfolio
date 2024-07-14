@@ -13,25 +13,31 @@
             transition: background-color 0.3s;
         }
         .sidebar {
-            width: 33%;
+            width: 30%; /* Adjust width to 30% of the main page */
             background-color: #f4f4f4;
             padding: 20px;
+            padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
             position: fixed;
             height: 100%;
-            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the contents horizontally */
+            justify-content: flex-start; /* Align contents to the top */
             transition: background-color 0.3s, color 0.3s;
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
         }
         .sidebar img {
             width: 80%;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 20px;
+            margin: 40px 0; /* Adjusted margin for more space around the photo */
         }
         .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
             margin: 0;
             padding: 0;
             list-style: none;
+            text-align: center; /* Center the text */
         }
         .sidebar a {
             text-decoration: none;
@@ -39,33 +45,8 @@
         }
         .sidebar section {
             margin-bottom: 20px;
-        }
-        main {
-            margin-left: 35%;
-            padding: 20px;
-            flex: 1;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        #intro img {
-    width: 100%; /* Adjust the percentage as needed */
-    max-width: 400px; /* Set a maximum width to prevent it from getting too large */
-    border-radius: 60%;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-        nav li {
-            margin-right: 10px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
+            margin-top: 20px;
+            width: 90%; /* Make sections take full width of the sidebar */
         }
         .dark-mode {
             background-color: #333;
@@ -78,6 +59,83 @@
         .dark-mode .sidebar a {
             color: #f4f4f4;
         }
+        header {
+            background-color: #007bff; /* Header background color */
+            padding: 10px 20px; /* Add padding to increase clickable area */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure header is above other content */
+            display: flex;
+            justify-content: flex-end; /* Align content to the right */
+            align-items: center;
+        }
+        nav {
+            margin-left: 20px; /* Add gap from the left side */
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f0f0f0; /* Hover color */
+        }
+        main {
+            flex: 1;
+            margin: 80px 20px 50px calc(30% + 20px); /* Adjust margin to account for fixed header and wider sidebar */
+            padding: 20px; /* Add padding for content */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 20px; /* Space above headers */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Position at the bottom right */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #dark-mode-toggle:hover {
+            background-color: #555;
+        }
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none; /* Hide sidebar on tablets and smaller devices */
+            }
+            main {
+                margin-left: 20px; /* Adjust margin to account for header space */
+                width: calc(100% - 40px); /* Full width minus padding */
+            }
+        }
+        @media (min-width: 1025px) {
+            #intro {
+                display: none; /* Hide sidebar on desktop devices */
+            }
+            #contactme {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,15 +145,14 @@
             <h2>ARUNAVA CHANDAN ROY</h2>
             <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
         </section>
-      <section id="contact">  
-    <h2>Contact Me</h2>
-    <p><strong>Address:</strong> Dhaka,Bangladesh</p>
-    <p><strong>Mobile:</strong> +8801303022570</p>
-    <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
-    <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
-</section>
-
+        <section id="contact">  
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
+        </section>
     </div>
 
     <main>
@@ -105,7 +162,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="education.html">Education</a></li>
-                    <li><a href="https://docs.google.com/document/d/1pDTQjfFYcXqSB_Y3q6RzxK5cs1d4Vt6pza1ZWkrvw4o/export?format=pdf">Resume</a></li>
+                    <li><a href="https://docs.google.com/document/d/1pDTQjfFYcXqSB_Y3q6RzxK5cs1d4Vt6pza1ZWkrvw4o/export?format=pdf">Download Resume</a></li>
                 </ul>
             </nav>
         </header>
@@ -115,7 +172,6 @@
             <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
         </section>
         <section id="about">
-            
             <div class="skills">
                 <h2>SKILLS</h2>
                 <ul>
@@ -147,20 +203,19 @@
                     <li>PwC Switzerland - Power BI Job Simulation</li>
                 </ul>
             </div>
-          <section id="contactme">  
-    <h2>Contact Me</h2>
-    <p><strong>Address:</strong> Dhaka,Bangladesh</p>
-    <p><strong>Mobile:</strong> +8801303022570</p>
-    <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
-    <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
-</section>
-        
+            <section id="contactme">  
+                <h2>Contact Me</h2>
+                <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+                <p><strong>Mobile:</strong> +8801303022570</p>
+                <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
+                <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
+            </section>
+        </section>
         <footer>
             <button id="dark-mode-toggle">Dark Mode</button>
         </footer>
     </main>
-
     <script>
         // Check for dark mode preference on page load
         document.addEventListener('DOMContentLoaded', () => {
@@ -180,6 +235,5 @@
             }
         });
     </script>
-     <script src="script.js"></script>
 </body>
 </html>
