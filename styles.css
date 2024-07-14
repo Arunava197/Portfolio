@@ -14,6 +14,7 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
+/* Dark mode styles */
 .dark-mode {
     background-color: #333; /* Dark mode background color */
     color: #fff; /* Dark mode text color */
@@ -25,6 +26,7 @@ body {
     width: 250px; /* Adjust width for mobile */
     background-color: #f4f4f4;
     padding: 20px;
+    padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     height: 100%;
@@ -40,7 +42,7 @@ body {
     width: 80%;
     border-radius: 50%;
     display: block;
-    margin: 20px 0; /* Added margin for space around the photo */
+    margin: 40px 0; /* Adjusted margin for more space around the photo */
 }
 
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
@@ -57,7 +59,7 @@ body {
 
 .sidebar section {
     margin-bottom: 20px;
-     margin-up: 20px;
+    margin-top: 20px;
     width: 90%; /* Make sections take full width of the sidebar */
 }
 
@@ -93,7 +95,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-    margin-top: 20px; /* Added gap between navigation and image */
 }
 
 nav ul li {
@@ -114,7 +115,7 @@ nav ul li a:hover {
 /* Main styles */
 main {
     flex: 1;
-    margin: 80px 20px 50px; /* Adjust margin to account for fixed header and add space on the sides */
+    margin: 80px 20px 50px 270px; /* Adjust margin to account for fixed header and sidebar */
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
