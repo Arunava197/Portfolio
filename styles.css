@@ -57,7 +57,8 @@ body {
 
 .sidebar section {
     margin-bottom: 20px;
-    width: 100%; /* Make sections take full width of the sidebar */
+     margin-up: 20px;
+    width: 90%; /* Make sections take full width of the sidebar */
 }
 
 /* Dark mode sidebar */
