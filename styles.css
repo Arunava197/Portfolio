@@ -53,6 +53,7 @@ body {
     text-align: center; /* Center the text */
    animation: flyForward 3s ease-out forwards; 
 }
+#about-me h2{animation:colorchange 2s;} 
 
 .sidebar a {
     text-decoration: none;
