@@ -43,6 +43,7 @@ body {
     border-radius: 50%;
     display: block;
     margin: 40px 0; /* Adjusted margin for more space around the photo */
+    animation: flyForward 2s ease-out forwards;
 }
 
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
@@ -110,7 +111,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e01616; /* Hover color */
+    color: #d61212; /* Hover color */
 }
 
 /* Main styles */
@@ -119,6 +120,9 @@ main {
     margin: 80px 20px 50px calc(30% + 40px); /* Adjust margin to account for fixed header and sidebar */
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+#intro img {
+    animation: flyForward 2s ease-out forwards;
 }
 
 /* Add spacing between headers */
