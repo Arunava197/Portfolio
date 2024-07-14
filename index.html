@@ -1,215 +1,239 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s;
+        }
+        .sidebar {
+            width: 30%; /* Adjust width to 30% of the main page */
+            background-color: #f4f4f4;
+            padding: 20px;
+            padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the contents horizontally */
+            justify-content: flex-start; /* Align contents to the top */
+            transition: background-color 0.3s, color 0.3s;
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
+        }
+        .sidebar img {
+            width: 80%;
+            border-radius: 50%;
+            display: block;
+            margin: 40px 0; /* Adjusted margin for more space around the photo */
+        }
+        .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center; /* Center the text */
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar section {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 90%; /* Make sections take full width of the sidebar */
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar {
+            background-color: #444;
+            color: #f4f4f4;
+        }
+        .dark-mode .sidebar a {
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff; /* Header background color */
+            padding: 10px 20px; /* Add padding to increase clickable area */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure header is above other content */
+            display: flex;
+            justify-content: flex-end; /* Align content to the right */
+            align-items: center;
+        }
+        nav {
+            margin-left: 20px; /* Add gap from the left side */
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f0f0f0; /* Hover color */
+        }
+        main {
+            flex: 1;
+            margin: 80px 20px 50px calc(30% + 20px); /* Adjust margin to account for fixed header and wider sidebar */
+            padding: 20px; /* Add padding for content */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 20px; /* Space above headers */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Position at the bottom right */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #dark-mode-toggle:hover {
+            background-color: #555;
+        }
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none; /* Hide sidebar on tablets and smaller devices */
+            }
+            main {
+                margin-left: 20px; /* Adjust margin to account for header space */
+                width: calc(100% - 40px); /* Full width minus padding */
+            }
+        }
+        @media (min-width: 1025px) {
+            #intro {
+                display: none; /* Hide sidebar on desktop devices */
+            }
+            #contactme {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <section id="about-me">
+            <img src="acroy.png" alt="ARUNAVA CHANDAN ROY">
+            <h2>ARUNAVA CHANDAN ROY</h2>
+            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
+        </section>
+        <section id="contact">  
+            <h2>Contact Me</h2>
+            <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+            <p><strong>Mobile:</strong> +8801303022570</p>
+            <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
+        </section>
+    </div>
 
-/* Body styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0; /* Light mode background color */
-    transition: background-color 0.3s ease;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="https://docs.google.com/document/d/1pDTQjfFYcXqSB_Y3q6RzxK5cs1d4Vt6pza1ZWkrvw4o/export?format=pdf">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="intro">
+            <img src="acroy.png" alt="ARUNAVA CHANDAN ROY">
+            <h2 class="typewriter">ARUNAVA CHANDAN ROY</h2>
+            <p>Hey there, I'm a data enthusiast who thrives on uncovering insights from numbers. I specialize in cleaning, analyzing, and visualizing data to empower businesses to make informed decisions.</p>
+        </section>
+        <section id="about">
+            <div class="skills">
+                <h2 class="typewriter">Skills</h2>
+                <ul>
+                    <li><b>Excel:</b> Execute advanced formulas, conduct precise data analysis, streamline data cleansing, apply conditional formatting, craft compelling data visualization, and foster collaboration.</li>
+                    <li><b>Power BI:</b> Demonstrate expertise in data visualization, drive dashboard creation, spearhead report generation, and optimize DAX formulas.</li>
+                    <li><b>SQL:</b> Master querying, oversee database management, orchestrate data manipulation, manage joins and unions, and innovate with window functions.</li>
+                    <li><b>Python:</b> Leverage proficiency in data analysis, champion data visualization using numpy, pandas, matplotlib, seaborn, and scikit-learn.</li>
+                    <li><b>Lightroom:</b> Excel in photo editing, pioneer image organization, and lead in color grading.</li>
+                    <li><b>Google Analytics 4 (GA4):</b> Navigate event tracking, conduct conversion tracking, analyze funnels, interpret user behavior, generate custom reports, and facilitate data import.</li>
+                    <li><b>SPSS:</b> Navigate statistical analysis, manipulate data, lead hypothesis testing, manage regression analysis, and create impactful data visualizations.</li>
+                    <li><b>R:</b> Deploy basic understanding of statistical analysis, drive data manipulation, employ visualization techniques, and utilize programming functionalities.</li>
+                    <li><b>Premiere Pro:</b> Innovate in video editing, manage timelines, refine audio editing, implement transitions, effects, and enhance color correction techniques.</li>
+                </ul>
+            </div>
+            <div class="hobbies">
+                <h2 class="typewriter">PROFESSIONAL CERTIFICATIONS</h2>
+                <ul>
+                     <li>Python for Data Science, AI and Development (Coursera)</li>
+                    <li>From Excel to Power BI (Coursera)</li>
+                    <li>Python Programming: Python Bootcamp for Beginners (Udemy)</li>
+                    <li>Advanced PowerPoint (BYLCx)</li>
+                    <li>Advanced SQL (Kaggle)</li>
+                    <li>Developing Reports with Microsoft Power BI (Microsoft)</li>
+                    <li>Google Analytics Certification (Google-Skillshop)</li>
+                    <li>Introduction to Business Analytics (BYLCx)</li>
+                    <li>Excel for Professionals (BYLCx)</li>
+                    <li>SQL (Basic) - HackerRank</li>
+                    <li>Excel Skills for Business Job Simulation (Forage)</li>
+                    <li>PwC Switzerland - Power BI Job Simulation</li>
+                </ul>
+            </div>
+            <section id="contactme">  
+                <h2 class="typewriter">Contact Me</h2>
+                <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+                <p><strong>Mobile:</strong> +8801303022570</p>
+                <p><strong>Email:</strong> <a href="mailto:arunava2171@gmail.com" title="Send me an email">arunava2171@gmail.com</a></p>
+                <p><strong>Github:</strong> <a href="https://github.com/Arunava197?tab=repositories" title="Visit my GitHub profile">github.com/Arunava197</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://shorturl.at/zkPEo" title="Visit my LinkedIn profile">www.linkedin.com/arunava-chandan-roy</a></p>
+            </section>
+        </section>
+        <footer>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </footer>
+    </main>
+    <script>
+        // Check for dark mode preference on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        });
 
-/* Dark mode styles */
-.dark-mode {
-    background-color: #333; /* Dark mode background color */
-    color: #fff; /* Dark mode text color */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for dark mode */
-}
-
-/* Sidebar styles */
-.sidebar {
-    width: 30%; /* Adjust width to 30% */
-    background-color: #f4f4f4;
-    padding: 20px;
-    padding-top: 60px; /* Add padding to the top to create space for the navigation pane */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    position: fixed;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the contents horizontally */
-    justify-content: flex-start; /* Align contents to the top */
-    transition: background-color 0.3s, color 0.3s;
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-}
-
-.sidebar img {
-    width: 80%;
-    border-radius: 50%;
-    display: block;
-    margin: 40px 0; /* Adjusted margin for more space around the photo */
-}
-
-.sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center; /* Center the text */
-   animation: flyForward 2s ease-out forwards; 
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
-}
-
-.sidebar section {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 90%; /* Make sections take full width of the sidebar */
-}
-
-/* Dark mode sidebar */
-.dark-mode .sidebar {
-    background-color: #444;
-    color: #f4f4f4;
-}
-
-.dark-mode .sidebar a {
-    color: #f4f4f4;
-}
-
-/* Header styles */
-header {
-    background-color: #007bff; /* Header background color */
-    padding: 10px 20px; /* Add padding to increase clickable area */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure header is above other content */
-    display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: center;
-}
-
-nav {
-    margin-left: 20px; /* Add gap from the left side */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #e01616; /* Hover color */
-}
-
-/* Main styles */
-main {
-    flex: 1;
-    margin: 80px 20px 50px calc(30% + 40px); /* Adjust margin to account for fixed header and sidebar */
-    padding: 20px; /* Add padding for content */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Add spacing between headers */
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 20px; /* Space above headers */
-}
-
-.typewriter {
-    overflow: hidden; /* Ensures text doesn't overflow */
-    display: inline-block; /* Displays the text inline */
-    white-space: nowrap; /* Prevents wrapping */
-    animation: typing 4s steps(40, end); /* Animation duration and steps */
-}
-
-/* Typewriter effect */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-/* Keyframes for flying forward animation */
-@keyframes flyForward {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-
-
-/* Footer styles */
-footer {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px; /* Position at the bottom right */
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #555;
-}
-
-/* Media query for tablets and smaller devices */
-@media (max-width: 1024px) {
-    .sidebar {
-        display: none; /* Hide sidebar on tablets and smaller devices */
-    }
-
-    main {
-        margin: 80px 20px 50px 20px; /* Adjust margin to 20px on all sides for mobile */
-        width: calc(100% - 40px); /* Full width minus padding */
-    }
-
-    header {
-        justify-content: space-between; /* Space out header content */
-    }
-
-    nav ul {
-        justify-content: space-around; /* Space out navigation links */
-    }
-}
-
-@media (min-width: 1025px) {
-    #intro {
-        display: none; /* Hide sidebar on desktop devices */
-    }
-
-    #contactme {
-        display: none;
-    }
-}
-
-
-
-
+        // Toggle dark mode and store preference
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.removeItem('darkMode');
+            }
+        });
+    </script>
+</body>
+</html>
