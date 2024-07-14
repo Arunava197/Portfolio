@@ -13,9 +13,9 @@ function handleLayout() {
         mainContent.style.paddingLeft = '20px'; // Adjust padding as needed
     } else {
         sidebar.style.display = 'block';
-        mainContent.style.marginLeft = '250px'; // Adjust margin for sidebar width
+        mainContent.style.marginLeft = '35%'; // Adjust margin for sidebar width
         mainContent.style.width = 'auto';
-        mainContent.style.paddingLeft = '0';
+        mainContent.style.paddingLeft = '20px'; // Adjust padding as needed
     }
 }
 
@@ -25,4 +25,25 @@ handleLayout();
 // Event listener for window resize (optional, for responsiveness)
 window.addEventListener('resize', function() {
     handleLayout();
+});
+
+// Dark mode toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
+    const body = document.body;
+
+    // Check for dark mode preference on page load
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    // Toggle dark mode and store preference
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.removeItem('darkMode');
+        }
+    });
 });
