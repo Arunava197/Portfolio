@@ -9,7 +9,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #aaa3a3; /* Light mode background color */
+    background-color:  #f0f0f0; /* Light mode background color */
     transition: background-color 0.3s ease;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
@@ -51,7 +51,7 @@ body {
     padding: 0;
     list-style: none;
     text-align: center; /* Center the text */
-   animation: flyForward 2s ease-out forwards; 
+   animation: flyForward 3s ease-out forwards; 
 }
 
 .sidebar a {
@@ -110,11 +110,13 @@ nav ul li a {
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
+   
 }
 
 nav ul li a:hover {
     color: #8b008b; /* Hover color */
 }
+#contact:hovar {color:#007bff}
 
 /* Main styles */
 main {
@@ -167,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
     75% { color: #8a2be2; } /* Color change at 75% of animation */
     
 }
+@keyframes revealLetters {
+    0% { background-size: 0% 100%; }
+    100% { background-size: 100% 100%; }
+  }
 
 
 
