@@ -9,7 +9,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Light mode background color */
+    background-color: #aaa3a3; /* Light mode background color */
     transition: background-color 0.3s ease;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
@@ -43,7 +43,7 @@ body {
     border-radius: 50%;
     display: block;
     margin: 40px 0; /* Adjusted margin for more space around the photo */
-    animation: flyForward 2s ease-out forwards;
+    animation: flyForward 1s ease-out forwards;
 }
 
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
@@ -64,6 +64,8 @@ body {
     margin-top: 20px;
     width: 90%; /* Make sections take full width of the sidebar */
 }
+main p {animation: flyForward 1s ease-out forwards;}
+main li {animation: flyForward 1s ease-out forwards;}
 
 /* Dark mode sidebar */
 .dark-mode .sidebar {
@@ -111,7 +113,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d61212; /* Hover color */
+    color: #8b008b; /* Hover color */
 }
 
 /* Main styles */
@@ -121,20 +123,20 @@ main {
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-#intro img {
-    animation: flyForward 2s ease-out forwards;
-}
 
 /* Add spacing between headers */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
+    
+    animation: typing 3s steps(40, end), /* Animation duration and steps */
+    colorchange 2s ;
 }
 
 .typewriter {
     overflow: hidden; /* Ensures text doesn't overflow */
     display: inline-block; /* Displays the text inline */
     white-space: nowrap; /* Prevents wrapping */
-    animation: typing 4s steps(40, end); /* Animation duration and steps */
+   
 }
 
 /* Typewriter effect */
@@ -156,6 +158,14 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+@keyframes colorchange {
+    0% { color: #8b008b; } /* Initial color */
+   
+  
+    75% { color: #8a2be2; } /* Color change at 75% of animation */
+    
 }
 
 
