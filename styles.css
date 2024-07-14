@@ -50,6 +50,7 @@ body {
     padding: 0;
     list-style: none;
     text-align: center; /* Center the text */
+   animation: flyForward 2s ease-out forwards; 
 }
 
 .sidebar a {
@@ -109,7 +110,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f0f0f0; /* Hover color */
+    color: #e01616; /* Hover color */
 }
 
 /* Main styles */
@@ -125,11 +126,36 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
 }
 
-/* Dark mode main content */
-.dark-mode main {
-    background-color: #333;
-    color: #fff;
+.typewriter {
+    overflow: hidden; /* Ensures text doesn't overflow */
+    display: inline-block; /* Displays the text inline */
+    white-space: nowrap; /* Prevents wrapping */
+    animation: typing 4s steps(40, end); /* Animation duration and steps */
 }
+
+/* Typewriter effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* Keyframes for flying forward animation */
+@keyframes flyForward {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
 
 /* Footer styles */
 footer {
@@ -183,3 +209,7 @@ footer {
         display: none;
     }
 }
+
+
+
+
