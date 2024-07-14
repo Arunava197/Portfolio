@@ -31,15 +31,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the contents horizontally */
-    justify-content: center; /* Center the contents vertically */
+    justify-content: flex-start; /* Align contents to the top */
     transition: background-color 0.3s, color 0.3s;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
 }
 
 .sidebar img {
     width: 80%;
     border-radius: 50%;
     display: block;
-    margin: 20px auto; /* Added margin for space around the photo */
+    margin: 20px 0; /* Added margin for space around the photo */
 }
 
 .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
@@ -56,7 +57,6 @@ body {
 
 .sidebar section {
     margin-bottom: 20px;
-    margin-left: 20px;
     width: 100%; /* Make sections take full width of the sidebar */
 }
 
@@ -92,6 +92,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin-top: 20px; /* Added gap between navigation and image */
 }
 
 nav ul li {
@@ -111,7 +112,7 @@ nav ul li a:hover {
 
 /* Main styles */
 main {
-    max-width: 100%; /* Full width on smaller screens */
+    flex: 1;
     margin: 80px 20px 50px; /* Adjust margin to account for fixed header and add space on the sides */
     padding: 20px; /* Add padding for content */
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -150,23 +151,25 @@ footer {
 #dark-mode-toggle:hover {
     background-color: #555;
 }
+
 /* Media query for tablets and smaller devices */
 @media (max-width: 1024px) {
     .sidebar {
         display: none; /* Hide sidebar on tablets and smaller devices */
     }
 
-   main {
+    main {
         margin-left: 20px; /* Adjust margin to account for header space */
+        width: calc(100% - 40px); /* Full width minus padding */
     }
 }
+
 @media (min-width: 1025px) {
     #intro {
         display: none; /* Hide sidebar on desktop devices */
     }
 
-   #contactme {
+    #contactme {
         display: none;
-   }
+    }
 }
-
