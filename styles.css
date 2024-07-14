@@ -150,3 +150,23 @@ footer {
 #dark-mode-toggle:hover {
     background-color: #555;
 }
+/* Media query for tablets and smaller devices */
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none; /* Hide sidebar on tablets and smaller devices */
+    }
+
+   main {
+        margin-left: 20px; /* Adjust margin to account for header space */
+    }
+}
+@media (min-width: 1025px) {
+    #intro {
+        display: none; /* Hide sidebar on desktop devices */
+    }
+
+   #contactme {
+        display: none;
+   }
+}
+
