@@ -24,4 +24,4 @@ The website has different layouts depending on whether you're using a mobile dev
 
 
 
-** Thank you for visiting ** 🤘 
+Thank you for visiting 🤘 
