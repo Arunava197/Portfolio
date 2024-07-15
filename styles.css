@@ -53,7 +53,7 @@ body {
     text-align: center; /* Center the text */
    animation: flyForward 3s ease-out forwards; 
 }
-#about-me h2{animation:colorchange 3s;} 
+#about-me h2{animation:colorchange 5s;} 
 
 .sidebar a {
     text-decoration: none;
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
     
     animation: typing 3s steps(40, end), /* Animation duration and steps */
-    colorchange 4s ;
+    colorchange 8s ;
 }
 
 .typewriter {
