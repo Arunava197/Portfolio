@@ -23,3 +23,5 @@ The website has different layouts depending on whether you're using a mobile dev
 ![Web_Photo_Editor](https://github.com/user-attachments/assets/92fdda6e-e62c-4e6f-be1f-a6c2dc0074cc)
 
 
+
+** Thank you for visiting ** 🤘 
