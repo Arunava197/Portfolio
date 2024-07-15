@@ -2,7 +2,7 @@
 
 *link:* https://arunava197.github.io/Portfolio/
 ### Tools used:
-HTML,CSS, vs Code. It's hosted on github. 
+HTML,CSS, VS Code. It's hosted on github. 
 
 ![Screenshot 2024-07-15 053121](https://github.com/user-attachments/assets/a0eadd82-2f41-4c16-bc06-50510766aa95)
 ### Basic Info:
