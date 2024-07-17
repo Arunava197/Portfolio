@@ -11,6 +11,7 @@
             min-height: 100vh;
             margin: 0;
             transition: background-color 0.3s;
+            overflow: auto;
         }
         .sidebar {
             width: 30%; /* Adjust width to 30% of the main page */
@@ -25,14 +26,14 @@
             align-items: center; /* Center the contents horizontally */
             justify-content: flex-start; /* Align contents to the top */
             transition: background-color 0.3s, color 0.3s;
-           
+           overflow:hidden;
         }
         .sidebar img {
             width: 80%;
             border-radius: 50%;
             display: block;
             margin: 20px 0; /* Adjusted margin for more space around the photo */
-            animation: flyForward 2s ease-out forwards;
+            
         }
         .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
             margin: 0;
@@ -100,7 +101,7 @@
             border-radius: 50%;
             display: block;
             margin: 20px 0;
-            animation: flyForward 2s ease-out forwards;
+           
         }
         h1, h2, h3, h4, h5, h6 {
             margin-top: 20px; /* Space above headers */
