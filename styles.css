@@ -37,7 +37,7 @@ body {
     align-items: center; /* Center the contents horizontally */
     justify-content: flex-start; /* Align contents to the top */
     transition: background-color 0.3s, color 0.3s;
-   
+   overflow: auto;
 }
 
 .sidebar img {
@@ -128,7 +128,7 @@ nav ul li a:hover {
     color: #8b008b; /* Hover color */
 }
 
-#contact:hover {
+#contact a:hover {
     color: #007bff;
 }
 
