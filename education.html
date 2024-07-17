@@ -25,13 +25,14 @@
             align-items: center; /* Center the contents horizontally */
             justify-content: flex-start; /* Align contents to the top */
             transition: background-color 0.3s, color 0.3s;
-            overflow-y: auto; /* Allow vertical scrolling if content overflows */
+           
         }
         .sidebar img {
             width: 80%;
             border-radius: 50%;
             display: block;
-            margin: 40px 0; /* Adjusted margin for more space around the photo */
+            margin: 20px 0; /* Adjusted margin for more space around the photo */
+            animation: flyForward 2s ease-out forwards;
         }
         .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
             margin: 0;
@@ -44,9 +45,8 @@
             color: #333;
         }
         .sidebar section {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            width: 90%; /* Make sections take full width of the sidebar */
+            margin-bottom: 10px;
+            width: 100%; /* Make sections take full width of the sidebar */
         }
         .dark-mode {
             background-color: #333;
@@ -88,13 +88,14 @@
             font-weight: bold;
             transition: color 0.3s ease;
         }
-       
         main {
             flex: 1;
             margin: 80px 20px 50px calc(30% + 20px); /* Adjust margin to account for fixed header and wider sidebar */
             padding: 20px; /* Add padding for content */
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+       
+        
         h1, h2, h3, h4, h5, h6 {
             margin-top: 20px; /* Space above headers */
         }
@@ -126,14 +127,7 @@
                 width: calc(100% - 40px); /* Full width minus padding */
             }
         }
-        @media (min-width: 1025px) {
-            #intro {
-                display: none; /* Hide sidebar on desktop devices */
-            }
-            #contactme {
-                display: none;
-            }
-        }
+        
     </style>
 </head>
 <body>
