@@ -34,7 +34,7 @@
             display: block;
             margin: 20px auto; /* Adjusted margin for more space around the photo */   
         }
-        .sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+        .sidebar p, .sidebar ul, .sidebar li {
             margin: 0;
             padding: 0;
             list-style: none;
@@ -121,7 +121,7 @@
         #dark-mode-toggle:hover {
             background-color: #555;
         }
-        @media (max-width: 1024px) {
+         @media (max-width: 1024px) {
             .sidebar {
                 display: none; /* Hide sidebar on tablets and smaller devices */
             }
@@ -130,7 +130,10 @@
                 width: calc(100% - 40px); /* Full width minus padding */
             }
         }
-        
+        @media (min-width: 1025px) {
+            #intro {
+                display: none; /* Hide intro section on desktop devices */
+            }
     </style>
 </head>
 <body>
