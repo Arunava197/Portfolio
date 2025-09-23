@@ -274,13 +274,16 @@ footer {
 }
 
 .experience-list li {
-    font-weight: normal; /* Reset text inside <li> so only numbers stay bold */
-    margin-bottom: 15px;
+    font-weight: normal; /* Reset text inside <li> so only numbers stay bold 
+    margin-bottom: 15px;*/
 }
 
 ul li {
-    list-style-type: square;
+    list-style-type: disc;   /* standard filled bullet */
+    margin-left: 20px;       /* consistent spacing */
 }
+
+
 
 
 
