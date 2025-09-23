@@ -58,6 +58,7 @@ body {
 
 #about-me h2 ,.sidebar h2{
     animation: colorchange 8s infinite;
+    text-align: center ;
 }
 
 
@@ -266,6 +267,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 
 
