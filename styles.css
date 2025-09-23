@@ -141,7 +141,7 @@ main {
 }
 
 /* Add spacing between headers */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
     animation: typing 3s steps(40, end), colorchange 8s infinite;
 }
@@ -266,6 +266,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 
 
