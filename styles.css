@@ -265,23 +265,25 @@ footer {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-}
 
+}
 .experience-list {
-    list-style-type: decimal; /* Numbered list */
-    font-weight: bold; /* Makes numbers bold */
-    padding-left: 20px;
+    list-style-type: decimal;
+    padding-left: 30px;  /* more space for numbers */
+    font-size: 12px;     /* increase base size */
 }
 
-.experience-list li {
-    font-weight: normal; /* Reset text inside <li> so only numbers stay bold 
-    margin-bottom: 15px;*/
+.experience-list li::marker {
+    font-weight: bold;   /* make numbers bold */
+    font-size: 22px;     /* make numbers larger */
+    color: #000;         /* solid black for emphasis */
 }
 
 ul li {
     list-style-type: disc;   /* standard filled bullet */
-    margin-left: 20px;       /* consistent spacing */
+    margin-left: auto;       /* consistent spacing */
 }
+
 
 
 
