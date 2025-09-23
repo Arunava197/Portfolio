@@ -34,7 +34,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: left; /* Left the contents horizontally */
+    align-items: flex-start; /* Left the contents horizontally */
     justify-content: flex-start; /* Align contents to the top */
     transition: background-color 0.3s, color 0.3s;
    overflow: auto;
@@ -52,7 +52,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: Left; /* Left the text */
+    text-align: flex-start; /*Left the text */
     animation: flyForward 2s ease-out forwards;
 }
 
@@ -100,7 +100,7 @@ header {
     z-index: 1000; /* Ensure header is above other content */
     display: flex;
     justify-content: flex-end; /* Align content to the right */
-    align-items: Left;
+    align-items: flex-start;
 }
 
 nav {
@@ -110,7 +110,7 @@ nav {
 nav ul {
     list-style-type: none;
     display: flex;
-    align-items: Left;
+    align-items: flex-start;
 }
 
 nav ul li {
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer styles */
 footer {
-    text-align: Left;
+    text-align: flex-start;
     margin-top: 20px;
 }
 
@@ -255,7 +255,7 @@ footer {
     width: 120px;
     background-color: #555;
     color: #fff;
-    text-align: Left;
+    text-align: flex-start;
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
@@ -266,10 +266,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
-#contact {
-    text-align: left;
-    margin-left: 20px; /* adjust as you like */
-}
+
 
 
 
