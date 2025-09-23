@@ -268,24 +268,20 @@ footer {
 }
 
 .experience-list {
-    list-style-type: decimal;
-    padding-left: 30px;  /* more space for numbers */
-    font-size: 18px;     /* increase base size */
+    list-style-type: decimal; /* Numbered list */
+    font-weight: bold; /* Makes numbers bold */
+    padding-left: 20px;
 }
 
-.experience-list li::marker {
-    font-weight: bold;   /* make numbers bold */
-    font-size: 22px;     /* make numbers larger */
-    color: #000;         /* solid black for emphasis */
-}
-
-.experience-item {
-    margin-bottom: 20px;
+.experience-list li {
+    font-weight: normal; /* Reset text inside <li> so only numbers stay bold */
+    margin-bottom: 15px;
 }
 
 ul li {
     list-style-type: square;
 }
+
 
 
 
