@@ -48,7 +48,7 @@ body {
     animation: flyForward 1s ease-out forwards;
 }
 
-.sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
+.sidebar p, .sidebar ul, .sidebar li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -266,6 +266,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 
 
