@@ -270,12 +270,12 @@ footer {
 .experience-list {
     list-style-type: decimal;
     padding-left: 30px;  /* more space for numbers */
-    font-size: 15px;     /* increase base size */
+    font-size: 16px;     /* increase base size */
 }
 
 .experience-list li::marker {
     font-weight: bold;   /* make numbers bold */
-    font-size: 22px;     /* make numbers larger */
+    font-size: 20px;     /* make numbers larger */
     color: #000;         /* solid black for emphasis */
 }
 
@@ -283,6 +283,7 @@ ul li {
     list-style-type: disc;   /* standard filled bullet */
     margin-left: auto;       /* consistent spacing */
 }
+
 
 
 
