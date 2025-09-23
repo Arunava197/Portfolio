@@ -48,7 +48,7 @@ body {
     animation: flyForward 1s ease-out forwards;
 }
 
-.sidebar p, .sidebar ul, .sidebar li {
+.sidebar h2, .sidebar p, .sidebar ul, .sidebar li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -145,11 +145,6 @@ main {
 h1, h2, h4, h5, h6 {
     margin-top: 20px; /* Space above headers */
     animation: typing 3s steps(40, end), colorchange 8s infinite;
-}
-h3 { 
- margin-top: 10px;
- margin-bottom: 20px;
-    
 }
 .typewriter {
     overflow: hidden; /* Ensures text doesn't overflow */
@@ -271,6 +266,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 
 
