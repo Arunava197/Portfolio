@@ -44,7 +44,7 @@ body {
     width: 80%;
     border-radius: 50%;
     display: block;
-    margin: auto; /* Adjusted margin for more space around the photo */
+    margin: 10px; /* Adjusted margin for more space around the photo */
     animation: flyForward 1s ease-out forwards;
 }
 
@@ -147,7 +147,8 @@ h1, h2, h4, h5, h6 {
     animation: typing 3s steps(40, end), colorchange 8s infinite;
 }
 h3 { 
- margin-top: auto;
+ margin-top: 10px;
+ margin-bottom: 20px;
     
 }
 .typewriter {
@@ -270,6 +271,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 
 
