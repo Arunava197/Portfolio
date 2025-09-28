@@ -291,10 +291,12 @@ ul li {
 }
 
 /* Dark mode */
-body.dark .experience-list li::marker,
-body.dark .experience-list ul li::marker {
+.dark-mode .experience-list li::marker,
+.dark-mode .experience-list ul li::marker {
     color: #fff;
 }
+
+
 
 
 
