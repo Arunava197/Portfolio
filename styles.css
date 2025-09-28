@@ -284,6 +284,13 @@ ul li {
     margin-left: auto;       /* consistent spacing */
 }
 
+/* Dark mode override */
+body.dark .experience-list li::marker,
+body.dark ul li::marker {
+    color: #fff; /* white for dark mode */
+}
+
+
 
 
 
